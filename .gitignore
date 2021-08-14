@@ -1,0 +1,81 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@edyCodeforLife 
+vercel
+/
+next.js
+1.2k
+65.4k
+11.9k
+Code
+Issues
+857
+Pull requests
+181
+Discussions
+Actions
+Security
+2
+Insights
+next.js/examples/with-tailwindcss/.gitignore
+@tanmaylaud
+tanmaylaud Added .gitignore to examples that are deployed to vercel (#15127)
+…
+Latest commit f00ad58 on 16 Jul 2020
+ History
+ 2 contributors
+@Timer@tanmaylaud
+ 34 lines (26 sloc)  386 Bytes
+  
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
