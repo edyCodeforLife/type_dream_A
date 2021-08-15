@@ -1,5 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/home.module.css";
+import { Row, Col } from "antd";
+import { TextEditor } from '../components/text-editor';
 
 export default function Home() {
 	return (
@@ -11,9 +13,16 @@ export default function Home() {
 				<meta name="theme-color" content="#000000" />
 				<meta name="description" content="TypeDream Assessment" />
 			</Head>
-			<div>
-				edy susanto tes
-			</div>
+			<>
+				<Row style={{ width: '100%', textAlign: 'center' }}>
+					<Col span={24}>
+						Simple Text Editor
+					</Col>
+					<Col span={24}>
+						<TextEditor />
+					</Col>
+				</Row>
+			</>
 
 		</div>
 	);
