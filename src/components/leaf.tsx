@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Leaf = HTML inline elements
 const Leaf = ({ props }) => {
 	const { leaf } = props;
 	let { attributes, children } = props;

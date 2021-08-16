@@ -10,7 +10,7 @@ import { EditListPlugin } from '@productboard/slate-edit-list';
 import { customOnKeyDown } from '../util/keydown';
 import { memo } from 'react';
 
-const options = {}; // additional options
+const options = {};
 // @refresh reset
 const [withEditList, onKeyDown, { Editor, Transforms }] =
 	EditListPlugin(options);
@@ -35,7 +35,6 @@ function _TextEditor() {
 			],
 		},
 	]
-	// Add the initial value when setting up our state.
 	const [value, setValue] = useState<Descendant[]>(initialValue);
 
 	const [hlColor, setHlColor] = useState('#fcba03');
@@ -49,8 +48,6 @@ function _TextEditor() {
 		}
 	}, [value]);
 
-	// Define a rendering function based on the element passed to `props`. We use
-	// `useCallback` here to memoize the function for subsequent renders.
 	const renderElement = useCallback((props) => {
 		switch (props.element?.type) {
 			case 'code':
@@ -68,7 +65,6 @@ function _TextEditor() {
 		}
 	}, []);
 
-	// Define a leaf rendering function that is memoized with `useCallback`.
 	const renderLeaf = useCallback(
 		(props) => {
 			let withColor = { ...props, hlColor };
