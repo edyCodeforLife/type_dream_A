@@ -24,13 +24,13 @@ function _TextEditor() {
 	const initialValue = [
 		{
 			type: 'paragraph',
-			children: [{ text: 'A line of text in a paragraph.' }],
+			children: [{ text: 'A line of Paragraph text.' }],
 		},
 		{
 			type: 'paragraph',
 			children: [
 				{
-					text: "Since it's rich text, you can do things like turn a selection of text bold, or add a semantically rendered block quote in the middle of the page, like this:",
+					text: "Since it's a text editor, you can do things like turn a selection of text bold, italic, and many else",
 				},
 			],
 		},

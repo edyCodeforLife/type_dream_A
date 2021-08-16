@@ -13,7 +13,7 @@ export default function Home() {
 				<meta name="theme-color" content="#000000" />
 				<meta name="description" content="TypeDream Assessment" />
 			</Head>
-			<>
+			<div>
 				<Row style={{ width: '100%', textAlign: 'center' }}>
 					<Col span={24}>
 						Simple Text Editor
@@ -22,7 +22,7 @@ export default function Home() {
 						<TextEditor />
 					</Col>
 				</Row>
-			</>
+			</div>
 
 		</div>
 	);

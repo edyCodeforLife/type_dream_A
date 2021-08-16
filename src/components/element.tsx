@@ -11,7 +11,7 @@ const CodeElement = (props) => {
 	);
 };
 const DefaultElement = (props) => {
-	return <p {...props.attributes}>{props.children}</p>;
+	return <div {...props.attributes}>{props.children}</div>;
 };
 
 const Link = (props) => {
@@ -20,11 +20,24 @@ const Link = (props) => {
 	const selected = useSelected();
 	const focused = useFocused();
 
+	const openLink = (link) => {
+		const anchorEl = document.createElement('a');
+
+		anchorEl.href = link;
+		anchorEl.target = '_blank';
+		anchorEl.rel = 'noopener noreferrer';
+		setTimeout(() => {
+			anchorEl.click();
+		});
+	}
+
+	console.log(window.location)
+
 	return (
 		<div className="element-link">
-			<a {...attributes} href={element.href}>
+			<div {...attributes} onClick={openLink(element.href)}>
 				{children}
-			</a>
+			</div>
 			{selected && focused && (
 				<div className="popup" contentEditable={false}>
 					<a href={element.href} rel="noreferrer" target="_blank">
